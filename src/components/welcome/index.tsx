@@ -1,8 +1,6 @@
-import { View, Image, Text} from 'react-native'
+import { View, Image, Text } from 'react-native'
 
-import {s} from './style'
-import { colors } from '@/styles/colors'
-
+import { s } from './style'
 
 export function Welcome() {
   return (
