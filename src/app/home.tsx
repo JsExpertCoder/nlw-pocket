@@ -1,16 +1,21 @@
-import { useEffect, useState } from 'react';
-import { View, Alert } from 'react-native'
+import { useEffect, useState } from "react"
+import { View, Alert } from "react-native"
+import MapView from "react-native-maps"
 
-import { api } from '@/services/api';
+import { api } from "@/services/api"
 
 import { Places } from "@/components/places"
 import { PlaceProps } from "@/components/place"
 import { Categories, CategoriesProps } from "@/components/categories"
 
-
 type MarketsProps = PlaceProps & {
     latitude: number
     longitude: number
+}
+
+const currentLocation = {
+    latitude: -23.561187293883442,
+    longitude: -46.656451388116494,
 }
 
 export default function Home() {
@@ -59,7 +64,15 @@ export default function Home() {
                 onSelect={setCategory}
                 selected={category}
             />
-
+            <MapView
+                style={{ flex: 1 }}
+                initialRegion={{
+                    latitude: currentLocation.latitude,
+                    longitude: currentLocation.longitude,
+                    latitudeDelta: 0.01,
+                    longitudeDelta: 0.01,
+                }}
+            />
             <Places data={markets} />
         </View>
     )
