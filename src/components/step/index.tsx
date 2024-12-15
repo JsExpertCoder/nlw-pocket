@@ -1,10 +1,9 @@
 import { View, Text } from 'react-native'
 
-import { IconGrid4x4, IconProps } from "@tabler/icons-react-native"
+import { IconProps } from "@tabler/icons-react-native"
 
 import { colors } from '@/styles/theme'
 import { s } from './style'
-import React from 'react'
 
 type StepProps = {
   title: string

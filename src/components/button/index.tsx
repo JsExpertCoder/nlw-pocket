@@ -5,8 +5,6 @@ import {
   ActivityIndicator,
 } from 'react-native'
 
-import React from 'react'
-
 import { IconProps as TablerIconProps } from '@tabler/icons-react-native'
 
 import { s } from './style'
