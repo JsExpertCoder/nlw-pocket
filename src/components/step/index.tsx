@@ -3,7 +3,7 @@ import { View, Text } from 'react-native'
 import { IconProps } from "@tabler/icons-react-native"
 
 import { colors } from '@/styles/theme'
-import { s } from './style'
+import { s } from './styles'
 
 type StepProps = {
   title: string

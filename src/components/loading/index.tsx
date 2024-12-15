@@ -1,6 +1,6 @@
 import { ActivityIndicator } from 'react-native'
 
-import { s } from './style'
+import { s } from './styles'
 import { colors } from '@/styles/colors'
 
 

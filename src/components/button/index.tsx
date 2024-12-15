@@ -7,7 +7,7 @@ import {
 
 import { IconProps as TablerIconProps } from '@tabler/icons-react-native'
 
-import { s } from './style'
+import { s } from './styles'
 
 import { colors } from "@/styles/theme"
 
