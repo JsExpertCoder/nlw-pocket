@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react"
 import { View, Alert } from "react-native"
+
+import * as Location from "expo-location"
 import MapView from "react-native-maps"
 
 import { api } from "@/services/api"
@@ -48,8 +50,23 @@ export default function Home() {
         }
     }
 
+    async function getCurrentLocation() {
+        try {
+            const { granted } = await Location.requestForegroundPermissionsAsync()
+
+            if (granted) {
+                const location = await Location.getCurrentPositionAsync()
+                console.log(location)
+            }
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
+
     useEffect(() => {
         fetchCategories()
+        //getCurrentLocation()
     }, [])
 
     useEffect(() => {
